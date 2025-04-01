@@ -1,3 +1,9 @@
+rent = 385
+food = 203
+transportation = 120
+savings = 0
+
+
 def add_income_entries():
 	day = int(input("What is the day you got the money?"))
 	month = int(input("What is the month you got the money"))
@@ -6,15 +12,23 @@ def add_income_entries():
 	amount = int(input("How much money did you get?"))
 	source = input("Where did you get it from?")
 	income_entry = [income_date, amount, source]
-def add_expense_entries():
+def add_expense_entries(rent, food, transportation, savings):
 	day = int(input("What is the day you used the money?"))
 	month = int(input("What is the month you used the money"))
 	year = int(input("What is the year you used the money"))
 	expense_date = [day, month, year]
 	amount = int(input("How much money did you use?"))
-	category = input("What did you use it on? (rent, food, transportation, savings)")
-	if category in ["rent", "food", "transportation", "savings"]: # adding more later (maybe?)
-		expense_entry = [expense_date, amount, category]
+	source = input("What did you use it on? (rent, food, transportation, savings)")
+	if source in ["rent", "food", "transportation", "savings"]: # adding more later (maybe?)
+		expense_entry = [expense_date, amount, source]
+		if source == "rent":
+			rent += amount
+		elif source == "food":
+			food += amount
+		elif source == "transportation":
+			transportation += amount
+		elif source == "savings":
+			savings += amount
 	else:
 		print("You didnt't enter a correct category!")
 		return
