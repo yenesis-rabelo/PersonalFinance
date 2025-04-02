@@ -1,4 +1,4 @@
-# Jonas Fairchild, main and pre-main functions ----------------------------------------------------------------------------------
+# Jonas Fairchild, main and pre-main functions ----------------------------------------------------
 
 import os
 from user_handling import *
@@ -47,4 +47,4 @@ def pre_main(users): # Pre-main function for before the user logs in, lets the u
 
 save(pre_main(load())) # Call the pre-main function by loading the users from the csv file, then save the result
 
-# End of Jonas' code ------------------------------------------------------------------------------------------------------------
+# End of Jonas' code ------------------------------------------------------------------------------
