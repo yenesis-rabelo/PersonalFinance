@@ -42,6 +42,14 @@ def log_in(users):
             print("That's not a user. Try again.")
     print("There are no users to log in as.")
 
+def create_user(users):
+    name = input("What do you want your account name to be?: ")
+    password = input("What do you want your password to be?: ")
+    balance = input("What do you want your account's initial balance to be?: ")
+    user = {'name': name, }
+    RETURN users
+
+
 def pre_main(users):
     while True:
         os.system('cls')
