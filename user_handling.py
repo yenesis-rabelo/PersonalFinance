@@ -1,4 +1,4 @@
-# Jonas Fairchild, login and new user creation code -----------------------------------------------------------------------------
+# Jonas Fairchild, login and new user creation code -----------------------------------------------
 
 def log_in(users): # Login function
     if users: # If there are users to log in as
@@ -24,4 +24,4 @@ def create_user(users): # Creates new users with their specifictions
     users.append({'name': name, 'password': password, 'balance': balance, 'record': []}) # Adds the user to the list of users
     return users
 
-# End of Jonas' code ------------------------------------------------------------------------------------------------------------
+# End of Jonas' code ------------------------------------------------------------------------------
