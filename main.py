@@ -1,6 +1,10 @@
-import os
+# Jonas Fairchild, main and pre-main functions ----------------------------------------------------------------------------------
 
-def main(user_info, users):
+import os
+from user_handling import *
+from file_handling import *
+
+def main(user_info, users): # Main function that branches out to other parts of the program.
     while True:
         os.system('cls')
         match input('What do you want to do?\n1: Income/expense tracking\n2: Budgeting\n3: Goal Tracker\n4: Visualizations\n5: Convert currency\n6: Log out\n') :
@@ -25,32 +29,7 @@ def main(user_info, users):
                 print("That's not a valid input. Try again.")
         input("Done reading?: ")
 
-def log_in(users):
-    if users:
-        print('Who do you want to log in as?: ')
-        while True:
-            for user in users:
-                print(f"- {user['name']}")
-            login = input().lower()
-            for user in users:
-                if login == user['name'].lower():
-                    while True:
-                        password = input("What is the password?: ")
-                        if password == user['password']:
-                            return user
-                        print("That password is not correct. Try again.")
-            print("That's not a user. Try again.")
-    print("There are no users to log in as.")
-
-def create_user(users):
-    name = input("What do you want your account name to be?: ")
-    password = input("What do you want your password to be?: ")
-    balance = input("What do you want your account's initial balance to be?: ")
-    user = {'name': name, }
-    RETURN users
-
-
-def pre_main(users):
+def pre_main(users): # Pre-main function for before the user logs in, lets the user create an account, log in, or stop the program.
     while True:
         os.system('cls')
         match input("What do you want to do?:\n1: Create new user\n2: Log in\n3: Exit\n"):
@@ -65,3 +44,7 @@ def pre_main(users):
             case _:
                 print("That's not a valid input. Try again.")
         input('Done reading?: ')
+
+save(pre_main(load())) # Call the pre-main function by loading the users from the csv file, then save the result
+
+# End of Jonas' code ------------------------------------------------------------------------------------------------------------
