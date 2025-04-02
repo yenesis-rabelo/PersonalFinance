@@ -2,17 +2,27 @@ import matplotlib.pyplot as plt
 import numpy as np
 from entries import *
 
-rent = rent
-food = food
-transportation = transportation
-savings = savings
+mcdonalds = ['egg','g','y','u']
+def fry_nugget(nugget):
+    #print('yum')
+    pass
+
+def pie_chart(user_info):
+    for nugget in mcdonalds:
+        fry_nugget(nugget)
 
 
-def pie_chart(rent, food, transportation, savings):
     plt.style.use('_mpl-gallery-nogrid')
 
-    titles = ['Rent', 'Food', 'Transportation', 'Savings']
-    values = [rent, food, transportation, savings]
+    titles = []
+    values = []
+
+    for entry in user_info["record"]:
+        if entry["location"] not in titles:
+            titles.append(entry["location"])
+        values[titles.index(entry["location"])] += entry[amount]
+        
+
     plt.style.use('_mpl-gallery-nogrid')
     # make data
     y = titles
@@ -26,4 +36,4 @@ def pie_chart(rent, food, transportation, savings):
         ylim=(0, 8), yticks=np.arange(1, 8))
     plt.show()
 
-pie_chart(rent, food, transportation, savings)
+pie_chart()
