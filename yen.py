@@ -1,6 +1,6 @@
-import csv
+# Yenesis Rabelo, currency conversion ---------------------------------------------------------------------------------
 
-# Exchange rates with USD as the default base currency
+import csv
 from entries import get_float
 
 def convert_money(amount, from_currency, to_currency):
@@ -43,7 +43,6 @@ def currency_converter(user_info):
     } 
 
     # User input for amount and currencies
-    print(f"Current balance for {user_info['name']}: {user_info['balance']} USD")
     amount = get_float("Enter the amount of money you want to convert: ")
     from_currency = "USD"  # Default to USD for the user
 
@@ -63,3 +62,5 @@ def currency_converter(user_info):
         print(f"{amount} {from_currency} is equal to {converted_amount} {to_currency}.")
     else:
         print(converted_amount)  # Error message if currency is not supported
+
+# End of Yenesis' code ------------------------------------------------------------------------------------------------
