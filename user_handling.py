@@ -1,5 +1,7 @@
 # Jonas Fairchild, login and new user creation code -------------------------------------------------------------------
 
+from entries import get_float
+
 def log_in(users): # Login function
     if users: # If there are users to log in as
         while True:
@@ -20,7 +22,7 @@ def log_in(users): # Login function
 def create_user(users): # Creates new users with their specifictions
     name = input("What do you want your account name to be?: ")
     password = input("What do you want your password to be?: ")
-    balance = input("What do you want your account's initial balance to be?: ")
+    balance = get_float("What do you want your account's initial balance to be?: ")
     users.append({'name': name, 'password': password, 'balance': balance, 'record': []}) # Adds the user to the list of users
     return users
 
