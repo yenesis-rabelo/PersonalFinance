@@ -1,3 +1,5 @@
+# Matthew McKinley, income/expense tracking ---------------------------------------------------------------------------
+
 import matplotlib.pyplot as plt
 import numpy as np
 from entries import *
