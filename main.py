@@ -4,6 +4,8 @@ run = True
 import os
 from user_handling import *
 from file_handling import *
+from entries import income_expense_tracking
+from pie_chart import pie_chart
 
 try: # Ensures that no errors occur if the user has not installed the necessary libraries.
     from InquirerPy import inquirer
@@ -34,8 +36,7 @@ def main(user_info, users): # Main function that branches out to other parts of 
 
         match action: # Calls the appropriate function for the user's choice
             case "Track income/expenses":
-                #income_expense_tracking()
-                pass
+                user_info = income_expense_tracking(user_info)
             case "Use budgeting tool":
                 #budgeting()
                 pass
@@ -43,8 +44,7 @@ def main(user_info, users): # Main function that branches out to other parts of 
                 #goal_tracker()
                 pass
             case "Visualize income/expense categories":
-                #visualizations()
-                pass
+                pie_chart(user_info)
             case "Convert currency":
                 #convert_currency()
                 pass
