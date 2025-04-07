@@ -1,6 +1,6 @@
 import csv
 
-savings_file = "Financial_thing/savings_progress.csv"#must be changed to actual file path 
+savings_file = "PersonalFinance/savings_progress.csv"#must be changed to actual file path 
 
 
 #load all existing saving goals 
