@@ -17,7 +17,7 @@ try:
 except:
     print("It looks like you haven't installed matplotlib yet. To do this, type 'pip3 install matplotlib' into the terminal.")
     run = False
-
+    
 def main(user_info, users): # Main function that branches out to other parts of the program.
     while True:
         os.system('cls')
