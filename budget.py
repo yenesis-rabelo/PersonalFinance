@@ -1,7 +1,7 @@
 import csv
 
 
-filename="Battle Simulator/yes/budget_data.csv" #change to actual file path
+filename="PersonalFinance/budget_data.csv" #change to actual file path
 
 
 # Function to load the last entered budget
