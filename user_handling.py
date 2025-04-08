@@ -21,6 +21,10 @@ def log_in(users): # Login function
 
 def create_user(users): # Creates new users with their specifictions
     name = input("What do you want your account name to be?: ")
+    for user in users:
+        if name == user['name']:
+            print("That username is already taken. Try again.")
+            return create_user(users)
     password = input("What do you want your password to be?: ")
     balance = get_float("What do you want your account's initial balance to be?: ")
     users.append({'name': name, 'password': password, 'balance': balance, 'goal': 0, 'record': []}) # Adds the user to the list of users

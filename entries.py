@@ -31,8 +31,8 @@ def sort_entries(entry):
 			
 def add_income_entries(user_info):
 	year = get_int("What is the year you got the money?: ", 2025)
-	month = get_int("What is the month you got the money?: ", 12)
-	day = get_int("What is the day you got the money?: ", 31)
+	month = get_int("What is the month of the year you got the money?: ", 12)
+	day = get_int("What is the day of the month you got the money?: ", 31)
 	income_date = [month, day, year]
 
 	amount = get_float("How much money did you get?: ")
@@ -53,8 +53,8 @@ def add_income_entries(user_info):
 
 def add_expense_entries(user_info):
 	year = get_int("What is the year you spent the money?: ", 2025)
-	month = get_int("What is the month you spent the money?: ", 12)
-	day = get_int("What is the day you spent the money?: ", 31)
+	month = get_int("What is the month of the year you spent the money?: ", 12)
+	day = get_int("What is the day of the month you spent the money?: ", 31)
 	expense_date = [month, day, year]
 
 	amount = -1 * get_float("How much money did you use?: ")
