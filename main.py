@@ -5,15 +5,10 @@ import os
 from user_handling import *
 from file_handling import *
 from entries import income_expense_tracking
-from pie_chart import pie_chart
+from InquirerPy import inquirer
 
-try: # Ensures that no errors occur if the user has not installed the necessary libraries.
-    from InquirerPy import inquirer
-except:
-    print("It looks like you haven't installed InquirerPy yet. To do this, type 'pip3 install InquirerPy' into the terminal.")
-    run = False
 try:
-    import matplotlib.pyplot as plt
+    from pie_chart import pie_chart
 except:
     print("It looks like you haven't installed matplotlib yet. To do this, type 'pip3 install matplotlib' into the terminal.")
     run = False
