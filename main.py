@@ -6,6 +6,7 @@ from user_handling import *
 from file_handling import *
 from entries import income_expense_tracking
 from InquirerPy import inquirer
+from currency_conversion import currency_converter
 
 try:
     from pie_chart import pie_chart
@@ -41,8 +42,7 @@ def main(user_info, users): # Main function that branches out to other parts of 
             case "Visualize income/expense categories":
                 pie_chart(user_info)
             case "Convert currency":
-                #convert_currency()
-                pass
+                currency_converter()
             case "Log out":
                 return user_info
         input("Done reading?: ")

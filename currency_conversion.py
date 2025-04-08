@@ -30,7 +30,7 @@ def convert_money(amount, from_currency, to_currency):
         else:
             return "Currency not supported."
 
-def currency_converter(user_info):
+def currency_converter():
     """Function to interact with the user, convert money, and update the users."""
     exchange_rates = {
     "USD": 1.0,     # Base currency (USD)
