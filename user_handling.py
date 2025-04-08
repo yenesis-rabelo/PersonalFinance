@@ -23,7 +23,7 @@ def create_user(users): # Creates new users with their specifictions
     name = input("What do you want your account name to be?: ")
     password = input("What do you want your password to be?: ")
     balance = get_float("What do you want your account's initial balance to be?: ")
-    users.append({'name': name, 'password': password, 'balance': balance, 'record': []}) # Adds the user to the list of users
+    users.append({'name': name, 'password': password, 'balance': balance, 'goal': 0, 'record': []}) # Adds the user to the list of users
     return users
 
 # End of Jonas' code --------------------------------------------------------------------------------------------------

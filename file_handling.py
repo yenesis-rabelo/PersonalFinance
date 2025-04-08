@@ -6,7 +6,7 @@ def save(users):
     with open("users.csv", 'w') as file:
         csv_writer = csv.writer(file)
         for user in users:
-            write_user = [user['name'], user['password'], user['balance']]
+            write_user = [user['name'], user['password'], user['balance'], user['goal']]
             for entry in user['record']:
                 for i in entry['date']:
                     write_user.append(i)
@@ -22,21 +22,21 @@ def load():
         csv_reader = csv.reader(file)
         for i in csv_reader:
             if i != []:
-                user = {'name': i[0], 'password': i[1], 'balance': float(i[2]), 'record': []}
+                user = {'name': i[0], 'password': i[1], 'balance': float(i[2]), 'goal': float(i[3]), 'record': []}
                 for j in i:
-                    if i.index(j) not in range(0, 3):
+                    if i.index(j) not in range(0, 4):
                     
                         match i.index(j) % 5:
-                            case 3:
-                                date.append(int(j))
                             case 4:
                                 date.append(int(j))
                             case 0:
                                 date.append(int(j))
                             case 1:
+                                date.append(int(j))
+                            case 2:
                                 entry['date'] = date
                                 entry['amount'] = float(j)
-                            case 2:
+                            case 3:
                                 entry['location'] = j
                                 user['record'].append(entry)
                                 date = []
