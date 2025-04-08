@@ -1,3 +1,4 @@
+# Aiden Challenger, budgeting -----------------------------------------------------------------------------------------
 
 from entries import *
 import datetime
@@ -47,3 +48,5 @@ def budgeting(user_info):
     else:
         if input("Your budget does not fit. Would you like to try again? (Y/n)").lower() == 'y':
             budgeting(user_info)
+
+# End of Aiden's code -------------------------------------------------------------------------------------------------
