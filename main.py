@@ -7,6 +7,8 @@ from file_handling import *
 from entries import income_expense_tracking
 from InquirerPy import inquirer
 from currency_conversion import currency_converter
+from budgeting import budgeting
+from saving import savings
 
 try:
     from pie_chart import pie_chart
@@ -21,8 +23,8 @@ def main(user_info, users): # Main function that branches out to other parts of 
             message =  "What do you want to do?",
             choices = [
                 "Track income/expenses",
-                "Use budgeting tool",
-                "Track goals",
+                "Make a monthly budget",
+                "Track a goal",
                 "Visualize income/expense categories",
                 "Convert currency",
                 "Log out",
@@ -33,12 +35,10 @@ def main(user_info, users): # Main function that branches out to other parts of 
         match action: # Calls the appropriate function for the user's choice
             case "Track income/expenses":
                 user_info = income_expense_tracking(user_info)
-            case "Use budgeting tool":
-                #budgeting()
-                pass
-            case "Track goals":
-                #goal_tracker()
-                pass
+            case "Make a monthly budget":
+                budgeting(user_info)
+            case "Track a goal":
+                savings(user_info)
             case "Visualize income/expense categories":
                 pie_chart(user_info)
             case "Convert currency":
