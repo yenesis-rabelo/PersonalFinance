@@ -15,11 +15,11 @@ This program has user profiles, so you have to log in to a profile to be able to
 
 ## Used Technologies
 ---
-+ Matplotlib - Brings up a window with the pie chart
++ Matplotlib - Brings up a window with the pie chart  
 `pip install matplotlib`
-+ NumPy - Does mathematical calculations
++ NumPy - Does mathematical calculations  
 `pip install numpy`
-+ InquirerPy - Gives better UI options
++ InquirerPy - Gives better UI options  
 `pip install InquirerPy`
 
 ## Current Features
@@ -55,7 +55,7 @@ No description available at the time
 + Aiden Challenger:
 No description available at the time  
 
-## Change Log
+## Changelog
 ---
 N/A  
 
