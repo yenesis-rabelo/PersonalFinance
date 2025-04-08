@@ -19,6 +19,8 @@ This program has user profiles, so you have to log in to a profile to be able to
 `pip install matplotlib`
 + NumPy - Does mathematical calculations
 `pip install numpy`
++ InquirerPy - Gives better UI options
+`pip install InquirerPy`
 
 ## Current Features
 ---
