@@ -59,4 +59,4 @@ Do not add to this section
 
 ## License
 ---
-Do not add to this section
+Do not add to this section.
