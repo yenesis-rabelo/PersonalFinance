@@ -6,14 +6,22 @@ import copy
 def get_int(prompt):
 	while True:
 		try:
-			return int(input(prompt))
+			num = int(input(prompt))
+			if num >= 0:
+				return num
+			else:
+				print("You can't input negatives. Try again.")
 		except:
 			print("Invalid input. Try again.")
 
 def get_float(prompt):
 	while True:
 		try:
-			return float(input(prompt))
+			num = float(input(prompt))
+			if num >= 0:
+				return num
+			else:
+				print("You can't input negatives. Try again.")
 		except:
 			print("Invalid input. Try again.")
 
