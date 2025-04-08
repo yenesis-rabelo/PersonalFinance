@@ -3,11 +3,11 @@
 import os
 import copy
 
-def get_int(prompt):
+def get_int(prompt, limit=9999999999):
 	while True:
 		try:
 			num = int(input(prompt))
-			if num >= 0:
+			if num >= 0 and num <= limit:
 				return num
 			else:
 				print("You can't input negatives. Try again.")
@@ -30,9 +30,9 @@ def sort_entries(entry):
 	return date[2] + (date[0] / 100) + (date[1] / 10000)
 			
 def add_income_entries(user_info):
-	year = get_int("What is the year you got the money?: ")
-	month = get_int("What is the month you got the money?: ")
-	day = get_int("What is the day you got the money?: ")
+	year = get_int("What is the year you got the money?: ", 2025)
+	month = get_int("What is the month of the year you got the money?: ", 12)
+	day = get_int("What is the day of the month you got the money?: ", 31)
 	income_date = [month, day, year]
 
 	amount = get_float("How much money did you get?: ")
@@ -52,9 +52,9 @@ def add_income_entries(user_info):
 	return user_info
 
 def add_expense_entries(user_info):
-	year = get_int("What is the year you spent the money?: ")
-	month = get_int("What is the month you spent the money?: ")
-	day = get_int("What is the day you spent the money?: ")
+	year = get_int("What is the year you spent the money?: ", 2025)
+	month = get_int("What is the month of the year you spent the money?: ", 12)
+	day = get_int("What is the day of the month you spent the money?: ", 31)
 	expense_date = [month, day, year]
 
 	amount = -1 * get_float("How much money did you use?: ")
@@ -75,13 +75,13 @@ def add_expense_entries(user_info):
 		
 def view_income_and_expenses(user_info):
 
-	start_year = get_int("\nWhat is the year of the time you want to start viewing entries?: ")
-	start_month = get_int("What is the month of the year you want to start viewing entries?: ")
-	start_day = get_int("What is the day of the month you want to start viewing entries?: ")
+	start_year = get_int("\nWhat is the year of the time you want to start viewing entries?: ", 2025)
+	start_month = get_int("What is the month of the year you want to start viewing entries?: ", 12)
+	start_day = get_int("What is the day of the month you want to start viewing entries?: ", 31)
 
-	end_year = get_int("\nWhat is the year of the time you want to stop viewing entries?: ")
-	end_month = get_int("What is the month of the year you want to stop viewing entries?: ")
-	end_day = get_int("What is the day of the month you want to stop viewing entries?: ")
+	end_year = get_int("\nWhat is the year of the time you want to stop viewing entries?: ", 2025)
+	end_month = get_int("What is the month of the year you want to stop viewing entries?: ", 12)
+	end_day = get_int("What is the day of the month you want to stop viewing entries?: ", 31)
 
 	entries = copy.deepcopy(user_info['record'])
 	entries.sort(key=sort_entries)
