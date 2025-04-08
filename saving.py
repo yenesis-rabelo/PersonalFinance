@@ -1,3 +1,4 @@
+# Aiden Challenger, goal tracking -------------------------------------------------------------------------------------
 
 from entries import get_float
 import datetime
@@ -29,3 +30,5 @@ def savings(user_info):
             print("Congrats! You achieved your goal!")
         else:
             print(f"You have ${user_info['balance']}, which means ${user_info['goal'] - user_info['balance']} left to save, and {30 - date.day} days left to do it.\nTo save money, use the income/expense tracker to add an income entry.")
+
+# End of Aiden's code -------------------------------------------------------------------------------------------------
